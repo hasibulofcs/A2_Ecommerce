@@ -1,7 +1,13 @@
 import app from "./app";
-const PORT = process.env.PORT || 3000;
+import config from "./config";
+import connectDB from "./config/DBConnection";
+const port = config.port || 3000;
 
-export const bootstrapLoader = () =>
-  app.listen(PORT, () => {
-    console.log(`Example app listening on port ${PORT}`);
+export const bootstrapLoader = () => {
+  // CONNECTING TO DATABASE
+  connectDB();
+
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`);
   });
+};
