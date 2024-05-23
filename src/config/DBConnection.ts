@@ -4,7 +4,7 @@ import config from ".";
 
 const DBuri = (config.databaseUri as string).replace(
   "<DBUSERNAME>:<DBPASSWORD>",
-  `${config.username as string}:${config.password as string}`
+  `${config.username as string}:${config.password as string}`,
 );
 
 const connectDB = async () => {
@@ -13,7 +13,7 @@ const connectDB = async () => {
 
     console.log(
       `Database connection successful on ${connectionStat.connection.host}`.blue
-        .bold
+        .bold,
     );
   } catch (error) {
     console.log(`Database connection failed. ${error}`);
