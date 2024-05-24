@@ -7,9 +7,13 @@ export const bootstrapLoader = () => {
   // CONNECTING TO DATABASE
   connectDB();
 
-  app?.listen(port, () => {
-    console.log(`E-commerce app listening on port ${port}`);
-  });
+  try {
+    app?.listen(port, () => {
+      console.log(`E-commerce app listening on port ${port}`);
+    });
+  } catch (error) {
+    console.log(`server failed to start with error ${error}`);
+  }
 };
 
 bootstrapLoader(); //STARTING THE SERVER

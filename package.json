@@ -1,12 +1,13 @@
 {
   "name": "A2_Ecommerce",
   "version": "1.0.0",
+  "type": "module",
   "description": "A minimalistic e-commerce assignment project",
   "main": "./dist/app.js",
   "scripts": {
     "start:prod": "node ./dist/server.js",
     "start:dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
-    "dev": "tsc --watch index.",
+    "dev": "tsc --watch ./dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint src --ignore-pattern .ts",
     "lint:fix": "npx eslint src --fix",
