@@ -13,5 +13,6 @@
       "dest": "dist/server.js",
       "methods": ["GET", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"]
     }
-  ]
+  ],
+  "outputDirectory": "dist"
 }
