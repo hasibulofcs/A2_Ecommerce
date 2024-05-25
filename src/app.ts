@@ -9,7 +9,7 @@ connectDB();
 app.use(express.json());
 app.use(cors());
 
-app.get("/api", (req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   res.send({ message: "Hello World!" });
 });
 
