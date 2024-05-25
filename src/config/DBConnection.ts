@@ -15,6 +15,8 @@ const connectDB = async () => {
       `Database connection successful on ${connectionStat.connection.host}`.blue
         .bold,
     );
+
+    return { connectionStat };
   } catch (error) {
     console.log(`Database connection failed. ${error}`);
   }

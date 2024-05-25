@@ -4,13 +4,13 @@ import connectDB from "./config/DBConnection";
 
 const app: Application = express();
 
-connectDB();
+const connectionStat = connectDB();
 
 app.use(express.json());
 app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
-  res.send({ message: "Hello World!" });
+  res.send({ ...connectionStat, message: "Hello World! Server has updated!" });
 });
 
 app.get("*", (req: Request, res: Response) => {
