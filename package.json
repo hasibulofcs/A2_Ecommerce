@@ -1,11 +1,11 @@
 {
   "name": "A2_Ecommerce",
   "version": "1.0.0",
-  "type": "module",
   "description": "A minimalistic e-commerce assignment project",
-  "main": "./dist/app.js",
+  "main": "src/server.ts",
   "scripts": {
-    "start:prod": "node ./dist/server.js",
+    "start:prod": "nodemon ./dist/server.js",
+    "build": "tsc",
     "start:dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
     "dev": "tsc --watch ./dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -33,6 +33,7 @@
     "eslint": "9.x",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.3.0",
+    "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.5",
